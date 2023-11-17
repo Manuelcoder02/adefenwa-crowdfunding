@@ -41,6 +41,9 @@ a:visited {
   text-decoration: none;
   color: var(--black);
 }
+a:hover {
+  text-decoration: underline;
+}
 .hidden {
   display: none;
 }
@@ -368,6 +371,9 @@ hr {
   align-items: center;
   justify-content: space-between;
   padding: 1em 0;
+}
+.btn-close-modal {
+  cursor: pointer;
 }
 .big-text {
   font-size: 1.5em;
