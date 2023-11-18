@@ -157,6 +157,7 @@ main {
 .btn-bookmark-desktop {
   display: none;
 }
+
 .btn-back {
   background-color: var(--moderate-cyan);
   width: 30%;
