@@ -5,6 +5,7 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  transition: background-color 0.3s ease-in-out, opacity 0.3s ease-in-out;
 }
 @font-face {
   font-family: "Commissioner";
@@ -202,10 +203,23 @@ hr {
   margin-left: 6.7em;
 }
 .sliders {
-  position: relative;
+  /* position: relative; */
   margin-bottom: 1em;
 }
-.slider {
+progress {
+  width: 100%;
+  height: 10px;
+  border-radius: 10px;
+}
+progress::-webkit-progress-value {
+  background-color: var(--moderate-cyan);
+  border-radius: 10px;
+}
+progress::-webkit-progress-bar {
+  background-color: #e3e3e3;
+  border-radius: 10px;
+}
+/* .slider {
   border-radius: 10px;
   background-color: var(--moderate-cyan);
   padding: 0.3em 0;
@@ -232,7 +246,7 @@ hr {
   left: 0;
   width: 100%;
   z-index: -1;
-}
+} */
 
 /* ### SECTION LAST STYLING */
 .last {
@@ -366,6 +380,7 @@ hr {
   width: 90%;
   max-width: 700px;
   z-index: 10;
+  /* transition: 0.3s ease-in-out; */
 }
 .selection-header {
   display: flex;
@@ -605,6 +620,12 @@ input[type="radio"] {
     font-weight: 700;
     background-color: hsl(0, 0%, 95%);
     cursor: pointer;
+  }
+  .cyan-bookmark-icon {
+    position: absolute;
+  }
+  .bc {
+    color: var(--dark-cyan);
   }
   .btn-bookmark-desktop:hover img {
     opacity: 0.5;

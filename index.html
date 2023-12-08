@@ -68,13 +68,36 @@
                 <button type="submit" class="btn btn-back">
                   Back this project
                 </button>
-                <button type="submit" class="btn-bookmark">
-                  <img src="./images/icon-bookmark.svg" alt="" />
-                </button>
-                <button type="submit" class="btn-bookmark-desktop">
-                  <img src="./images/icon-bookmark.svg" alt="" class="a" />
-                  <p class="bt">Bookmark</p>
-                </button>
+                <div class="bookmark-buttons">
+                  <button type="submit" class="btn-bookmark">
+                    <img
+                      src="./images/icon-bookmark.svg"
+                      alt="bookmark icon"
+                      class="dd"
+                    />
+                    <img
+                      src="./images/icon-bookmark-cyan.svg"
+                      alt="cyan bookmark"
+                      class="cc hidden"
+                    />
+                  </button>
+                  <button type="submit" class="btn-bookmark-desktop">
+                    <img
+                      src="./images/icon-bookmark.svg"
+                      alt="bookmark icon"
+                      class="bookmark-icon-desktop"
+                    />
+                    <img
+                      src="./images/icon-bookmark-cyan.svg"
+                      alt="cyan bookmark"
+                      class="cyan-bookmark-icon visibility-hidden"
+                    />
+                    <span>
+                      <span class="bb"><p class="bt">Bookmark</p></span>
+                      <span class="bc hidden"><p>Bookmarked</p></span>
+                    </span>
+                  </button>
+                </div>
               </div>
             </div>
           </section>
@@ -97,8 +120,9 @@
                 </div>
               </div>
               <div class="sliders">
-                <div class="slider"></div>
-                <div class="slider-two"></div>
+                <!-- <div class="slider"></div>
+                <div class="slider-two"></div> -->
+                <progress class="progress" value="25" max="30"></progress>
               </div>
             </div>
           </section>
