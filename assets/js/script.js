@@ -21,6 +21,14 @@ const selectionEL = document.querySelector(".selection");
 
 // Selection elements
 const btnCloseSelection = document.querySelector(".btn-close-modal");
+
+// Pledge elements
+const btnSelectBamboo = document.querySelector(".btn-select");
+
+// Pledge functionality
+btnSelectBamboo.addEventListener("click", function () {
+  selectionEL.classList.remove("hidden");
+});
 ////////////////////////////////////////////////////
 /* FUNCTIONALITY */
 btnOpenNav.addEventListener("click", function () {
