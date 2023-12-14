@@ -346,7 +346,7 @@ progress::-webkit-progress-bar {
 /* ### SUCCESS MODAL STYLING */
 .success {
   background-color: #fff;
-  position: absolute;
+  position: fixed;
   top: 5%;
   left: 5%;
   width: 90%;
@@ -354,6 +354,7 @@ progress::-webkit-progress-bar {
   border-radius: 10px;
   text-align: center;
   max-width: 400px;
+  z-index: 7;
 }
 .image-check {
   padding: 1em 0;
@@ -374,13 +375,15 @@ progress::-webkit-progress-bar {
   background-color: #fff;
   padding: 1em 0;
   border-radius: 10px;
-  position: absolute;
+  position: fixed;
   top: 5%;
   left: 5%;
   width: 90%;
   max-width: 700px;
   z-index: 10;
   /* transition: 0.3s ease-in-out; */
+  overflow-y: scroll;
+  height: 80vh;
 }
 .selection-header {
   display: flex;
@@ -701,6 +704,11 @@ input[type="radio"] {
     display: flex;
     justify-content: space-between;
   }
+}
+
+/* STATES STYLING */
+.border-color {
+  border: 1px solid hsl(176, 50%, 47%);
 }
 /* ATTRIBUTION STYLING */
 .attribution {

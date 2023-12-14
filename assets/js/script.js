@@ -15,6 +15,9 @@ const bookmarkColorText = document.querySelector(".bc");
 const mobileGreyBookmark = document.querySelector(".dd");
 const mobileColorBookmark = document.querySelector(".cc");
 
+const successModal = document.querySelector(".success");
+const btnGotIt = document.querySelector(".btn-got-it");
+
 // Back this project elements
 const btnBack = document.querySelector(".btn-back");
 const selectionEL = document.querySelector(".selection");
@@ -23,11 +26,47 @@ const selectionEL = document.querySelector(".selection");
 const btnCloseSelection = document.querySelector(".btn-close-modal");
 
 // Pledge elements
+const btnNoPledge = document.querySelector(".pledge-label");
+const noPledgeEL = document.querySelector(".no-pledge");
 const btnSelectBamboo = document.querySelector(".btn-select");
 
+const selectedPledges = document.querySelectorAll(".selected-pledge");
+const radioPledge = document.querySelector("#radio-pledge");
+
+const btnContinueELS = document.querySelectorAll(".btn-continue");
+let backers;
+
 // Pledge functionality
+//No pledge
+btnNoPledge.addEventListener("click", function () {
+  selectedPledges[0].classList.toggle("hidden");
+  noPledgeEL.classList.toggle("border-color");
+  if (radioPledge.checked) {
+    radioPledge.checked = false;
+  } else {
+    radioPledge.checked = true;
+  }
+});
+btnContinueELS[0].addEventListener("click", function () {
+  selectionEL.classList.add("hidden");
+  successModal.classList.remove("hidden");
+  for (let i = 5007; i > 0; i++) {
+    backers = backers.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+    document.querySelector(".nn").textContent = backers;
+  }
+});
+// backers++;
+// backers = backers.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+// document.querySelector(".nn").textContent = backers;
+// });
+btnGotIt.addEventListener("click", function () {
+  successModal.classList.add("hidden");
+  overlayEL.classList.add("hidden");
+});
+
 btnSelectBamboo.addEventListener("click", function () {
   selectionEL.classList.remove("hidden");
+  overlayEL.classList.remove("hidden");
 });
 ////////////////////////////////////////////////////
 /* FUNCTIONALITY */

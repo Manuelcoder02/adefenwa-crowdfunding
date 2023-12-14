@@ -110,7 +110,7 @@
                 </div>
                 <hr />
                 <div class="backers">
-                  <h1>5,007</h1>
+                  <h1 class="nn">5,007</h1>
                   <p>total backers</p>
                 </div>
                 <hr />
@@ -161,7 +161,11 @@
                       <p>left</p>
                     </div>
 
-                    <button type="submit" class="btn btn-select">
+                    <button
+                      type="submit"
+                      class="btn btn-select"
+                      onclick="bambooSelection()"
+                    >
                       Select Reward
                     </button>
                   </div>
@@ -255,8 +259,15 @@
               <div class="no-pledge">
                 <div class="container">
                   <div class="pledge-header">
-                    <input type="radio" name="" id="radio-pledge" />
-                    <label class="pledge-label">Pledge with no reward</label>
+                    <input
+                      type="radio"
+                      name="radio"
+                      id="radio-pledge"
+                      class="dd"
+                    />
+                    <label for="radio-pledge" class="pledge-label dd"
+                      >Pledge with no reward</label
+                    >
                   </div>
                   <p class="pledge-text">
                     Choose to support us without a reward if you simply believe
@@ -264,16 +275,23 @@
                     receive product updates via email.
                   </p>
                 </div>
+                <!-- Selected pledge start   -->
+                <div class="selected-pledge hidden">
+                  <button type="submit" class="btn btn-continue">
+                    Continue
+                  </button>
+                </div>
+                <!-- Selected pledge end -->
               </div>
               <div class="bamboo-stand-no" id="bamboo">
                 <div class="container">
                   <div class="bamboo-header">
                     <div class="row-bb">
-                      <input type="radio" name="" id="radio-bamboo" />
-                      <div class="bamb">
+                      <input type="radio" name="radio" id="radio-bamboo" />
+                      <label for="radio-bamboo" class="bamb">
                         <h1>Bamboo Stand</h1>
                         <h2>Pledge $25 or more</h2>
-                      </div>
+                      </label>
                     </div>
                     <div class="span-days-desktop">
                       <h1>101</h1>
@@ -311,11 +329,11 @@
                 <div class="container">
                   <div class="black-header">
                     <div class="row-bb">
-                      <input type="radio" name="" id="radio-black" />
-                      <div class="black">
+                      <input type="radio" name="radio" id="radio-black" />
+                      <label for="radio-black" class="black">
                         <h1>Black Edition Stand</h1>
                         <h2>Pledge $75 or more</h2>
-                      </div>
+                      </label>
                     </div>
                     <div class="span-days-desktop">
                       <h1>64</h1>
@@ -353,11 +371,11 @@
                 <div class="container">
                   <div class="mahogamy-header">
                     <div class="row-bb">
-                      <input type="radio" name="" id="radio-mahogamy" />
-                      <div class="mahogamy-select">
+                      <input type="radio" name="radio" id="radio-mahogamy" />
+                      <label for="radio-mahogamy" class="mahogamy-select">
                         <h1>Mahogamy Special Edition</h1>
                         <h2>Pledge $200 or more</h2>
-                      </div>
+                      </label>
                     </div>
                     <div class="span-days-desktop">
                       <h1>0</h1>
