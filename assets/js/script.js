@@ -50,15 +50,7 @@ btnNoPledge.addEventListener("click", function () {
 btnContinueELS[0].addEventListener("click", function () {
   selectionEL.classList.add("hidden");
   successModal.classList.remove("hidden");
-  for (let i = 5007; i > 0; i++) {
-    backers = backers.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
-    document.querySelector(".nn").textContent = backers;
-  }
 });
-// backers++;
-// backers = backers.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
-// document.querySelector(".nn").textContent = backers;
-// });
 btnGotIt.addEventListener("click", function () {
   successModal.classList.add("hidden");
   overlayEL.classList.add("hidden");
